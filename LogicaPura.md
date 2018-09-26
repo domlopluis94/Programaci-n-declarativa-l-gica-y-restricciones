@@ -47,6 +47,35 @@ Suma():-/aridad4 por su parte realiza la suma. lo normal seria en uno poner D  e
 
 # Recursividad
 
+En prolog no se realizan bucles, para cubrir esto entra en juego la recursividad. 
+
+	esmenor(0,1).
+	esmenor(1,2).
+	esmenor(2,3).
+	esmenor(3,4).
+
+	restar(A,B,C):-
+		esmenor(A1,A),
+		esmenor(B1,B),
+		restar(A1,B1,C).
+	restar(A,1,C):-
+		esmenor(C,A).
+	restar(0,0,0).
+
+ejec--
+
+	?- restar(2,1,C).
+	C = 1 ? 
+	yes
+	
+	?- restar(3,2,C).
+	C = 1 ? 
+	yes
+
+Lo primero entender que esmenor es nuestra base de datos, nos pone a la izquierda el menor de la derecha. Una vez claro eso 
+nos fijamos en restar (C = A-B), la primera vez que lo vemos nos fijamos en que utiliza es menor para restar uno a A y B (A-1,B-1), y luego se llama a el mismo con Ay B restados sin modificar C. Esta llamada se repetira hasta que a restar se le pase por B un 1, de este modo cuando ocurra ese caso solo se decrementara A y se guardara en C dando por finalizada la llamada recursiva puesto que ya ha realizado la comprobación. 
+
+
 # Listas
 
 # Arboles
