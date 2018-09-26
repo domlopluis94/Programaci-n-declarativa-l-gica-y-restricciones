@@ -1,3 +1,5 @@
+# Logica Pura
+
 Para entender esta parte bien hay que pensar que trabajamos sobre un lienzo en blanco y por tanto todo lo que queramos usar tendremos que crearlo nosotros.
 
 El primer paso sera la creación de "base de datos logica" (logic Database) y "base de datos relacional".
