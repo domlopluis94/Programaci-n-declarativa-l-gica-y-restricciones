@@ -1,16 +1,7 @@
 # Programacion declarativa logica y restricciones
-Ejemplos y tutorial de programación en Prolog
+            Ejemplos y tutorial de programación en Prolog
 
-# Introducción a Programación logica pura 
-
-Para entender esta parte bien hay que pensar que trabajamos sobre un lienzo en blanco y por tanto todo lo que queramos usar tendremos que crearlo nosotros.
-
-El primer paso sera la creación de "base de datos logica" (logic Database) y "base de datos relacional". 
-
-Para verlo de la forma mas clara posble vamos a ver un ejemplo:-
-      padre(juan).
-      hijo(manolo).
-vale que vemos aqui, hemos creado la relacion padre con juan y hijo con manolo. si a ciao le preguntamos 
-
-              resistor()
-Predicado -> resistor()
+1 - Es importante instalar 
+      Ciao :  http://ciao-lang.org
+      Emacs : https://www.gnu.org/software/emacs/
+2 - Estara bien instalados cuando al abrir emacs con un archivo .pl nos saldra el simbolo de ciao y el simbolo de la C con una estrella (este nos permitira compilar nuestro documento pl).
