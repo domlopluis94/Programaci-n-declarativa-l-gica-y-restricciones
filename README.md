@@ -6,3 +6,8 @@
       Emacs : https://www.gnu.org/software/emacs/
 
 2 - Estara bien instalados cuando al abrir emacs con un archivo .pl nos saldra el simbolo de ciao y el simbolo de la C con una estrella (este nos permitira compilar nuestro documento pl).
+
+
+----Contenido----
+
+Caprteta Ejercicios log pura contiene la explicación del tema y los .pl usados para una mejor comprensión
