@@ -6,13 +6,20 @@ El primer paso sera la creación de "base de datos logica" (logic Database) y "b
 
 Para verlo de la forma mas clara posble vamos a ver un ejemplo:- 
   
-  padre(juan). 
-  hijo(manolo). 
+  	padre(juan). 
+  	hijo(manolo). 
 
 vale que vemos aqui, hemos creado la relacion padre con juan y hijo con manolo. si a ciao le preguntamos hijo(manolo retornara yes). 
 Ahora para que me podria servir esto, pues por ejemlo para crear la estructura eshijode
   
-  esHijode(A,B):-
-	padre(A),
-	hijo(B).
+  	esHijode(A,B):-
+		padre(A),
+		hijo(B).
+Ejemplo de la ejecución :
+
+	esHijode(juan,manolo).
+		yes
+	esHijode(X,manolo).
+		X = juan ? 
+		yes
 
