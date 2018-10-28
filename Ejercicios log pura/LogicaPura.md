@@ -15,12 +15,12 @@ Ahora para que me podria servir esto, pues por ejemlo para crear la estructura e
   	esHijode(A,B):-
 		padre(A),
 		hijo(B).
-Ejemplo de la ejecución :
+**Ejemplo de la ejecución** :
 
 	esHijode(juan,manolo).
 		yes
 		
-Ejemplo ejecución para optener el hijo
+**Ejemplo ejecución para optener el hijo**
 	
 	esHijode(X,manolo).
 		X = juan ? 
@@ -35,7 +35,7 @@ Hablando de variables, en prolog las variables una vez se asignan no se pueden m
 	suma(A,B,C,D):-
 		uno(A,B,C1),
 		dos(C1,C,D).
----Ejec
+**Ejec**
 
 	?- suma(1,1,2,D).
 	D = 4 ? 
@@ -62,7 +62,7 @@ En prolog no se realizan bucles, para cubrir esto entra en juego la recursividad
 		esmenor(C,A).
 	restar(0,0,0).
 
-ejec--
+**ejec**
 
 	?- restar(2,1,C).
 	C = 1 ? 
@@ -73,9 +73,28 @@ ejec--
 	yes
 
 Lo primero entender que esmenor es nuestra base de datos, nos pone a la izquierda el menor de la derecha. Una vez claro eso 
-nos fijamos en restar (C = A-B), la primera vez que lo vemos nos fijamos en que utiliza es menor para restar uno a A y B (A-1,B-1), y luego se llama a el mismo con Ay B restados sin modificar C. Esta llamada se repetira hasta que a restar se le pase por B un 1, de este modo cuando ocurra ese caso solo se decrementara A y se guardara en C dando por finalizada la llamada recursiva puesto que ya ha realizado la comprobación. 
+nos fijamos en restar (C = A-B), la primera vez que lo vemos nos fijamos en que utiliza es menor para restar uno a A y B (A-1,B-1), y luego se llama a el mismo con A y B restados sin modificar C. Esta llamada se repetira hasta que a restar se le pase por B un 1, de este modo cuando ocurra ese caso solo se decrementara A y se guardara en C dando por finalizada la llamada recursiva puesto que ya ha realizado la comprobación. 
+## Polimorfismo
+Podemos usar el mismo predicado para distintos tipos de datos , podemos tener un mismo predicado con una versión para listas y otra para arboles o variables simples. 
 
 
 # Listas
 
+
 # Arboles
+
+
+
+#Terminologia
+##Functor/Predicado 
+
+Utiliza functor como lo que en otros lenguajes se asimila a una función  en el ejemplo tree es el functor , tiene aridad 3 /3, porque tiene tres variables. 
+	
+	tree(Element,Left,Right).
+	
+##Variable
+  
+
+
+#Reto programa para integrar 
+
