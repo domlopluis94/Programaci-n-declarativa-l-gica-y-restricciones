@@ -49,7 +49,20 @@ Usando estas herramientas como comprobacion en los predicados podemos evitar que
 		arg(2,[a,b,c,d],X) 
 		X= [b,c,d] 
 
-### =..
+### =..    "univ"
+Permite pasar una estructura a lista
+
+* L is the decomposition of a term T into a list comprising its principal functor followed by its arguments.
+
+		?- date(9,february,1947) =.. L.
+		
+			L = [date,9,february,1947].
+			
+		?- _F = ’+’, 
+		X =.. [_F,a,b].
+		
+			X = a + b.
+		
 
 
 ### Metalogicos
@@ -70,8 +83,22 @@ Me permiten saber si una variable esta instanciada
 		X\=Y falso dos variables libre siempre unifican
 		X\==Y cierto
 
-### 
-		
+
+### Findall , bagof y setof
+
+findall(Term, Goal, ListResults): ListResults is the set of all instances of
+Term such that Goal is satisfied
+
+setof(Term, Goal, ListResults): ListResults is the ordered set (no
+duplicates) of all instances of Term such that Goal is satisfied
+setof no nos da elementos repetidos 
+
+bagof/3 same, but returns list unsorted and with duplicates (in backtracking
+order)
 
 
+### Negacion 
+#### /+ 
+Si no esta instanciado no se asegura que funcione correctamente 
 
+#### ! corte
