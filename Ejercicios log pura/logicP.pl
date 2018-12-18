@@ -24,3 +24,40 @@ restar(A,B,C):-
 restar(A,1,C):-
 	esmenor(C,A).
 restar(0,0,0).
+
+
+igualdA(A,B):-
+	A =:=B.
+
+igualdNOA(A,B):-
+	A==B.
+
+
+asignacion(A,C,D):-
+	A is C,
+	D =:= A.
+
+asignacion2(A,C,D):-
+	A =  C,
+	D =:= A.
+
+finalcola(Lista,Final):-
+	arg(2,Lista,X), %cola
+	finalcola(X,Final).
+
+finalcola(Lista,Y):-
+	arg(1,Lista,Y), %cabeza
+	arg(2,Lista,X), %cola
+	X ==  [].
+
+likes(bill, cider).
+likes(dick, beer).
+likes(tom, beer).
+likes(tom, cider).
+likes(harry, beer).
+likes(jan, cider).
+
+
+not(Goal) :- call(Goal), !, fail.
+not(_).
+

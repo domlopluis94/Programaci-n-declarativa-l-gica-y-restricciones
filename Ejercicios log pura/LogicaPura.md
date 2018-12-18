@@ -25,6 +25,10 @@ Ahora para que me podria servir esto, pues por ejemlo para crear la estructura e
 	esHijode(X,manolo).
 		X = juan ? 
 		yes
+	esHijode(X,Y).
+		X = juan ?
+		Y = manolo
+		yes	
 
 Vamos a fijarnos bien en lo que hemos echo, hemos declarado unos tipos y unas estructuras, luego con esas declaraciones hemos echo un programa que nos comprueba o nos retorna un padre o un hijo en función de lo que le pasemos. 
 Si hubieramos querido poner los nombre en mayuscula tendriamos que usar 'Juan' ya que si usasemos una mayuscula ciao nos reconoceria como una variable y daria error. 
@@ -80,10 +84,16 @@ Podemos usar el mismo predicado para distintos tipos de datos , podemos tener un
 
 # Listas
 
-
-# Arboles
-
-
+	[ ]
+	[1,2]
+	[1,2|[2,4,5]]
+	[A,B|C]
+	
+	A= 1
+	B= 2
+	C [2,4,5]
+	
+	
 
 #Terminologia
 ##Functor/Predicado 
@@ -92,8 +102,6 @@ Utiliza functor como lo que en otros lenguajes se asimila a una función  en el 
 	
 	tree(Element,Left,Right).
 	
-##Variable
-  
 
 
 #Reto programa para integrar 
