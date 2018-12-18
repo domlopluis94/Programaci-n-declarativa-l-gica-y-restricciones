@@ -46,7 +46,7 @@ ahora
 * \==
 
 		igualdNOA(A,B):-
-		A==B.
+			A==B.
 		
 		?- igualdNOA(A,B).
 		no
@@ -58,6 +58,7 @@ ahora
 		yes
 		?- igualdNOA(3,3).	
 		yes
+		
 Tambien tenemos @> , @>= , @=<, @<
 
 		?- f(a) @> f(b). %Fails

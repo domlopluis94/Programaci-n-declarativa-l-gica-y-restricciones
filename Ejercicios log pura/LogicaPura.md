@@ -92,9 +92,33 @@ Podemos usar el mismo predicado para distintos tipos de datos , podemos tener un
 	A= 1
 	B= 2
 	C [2,4,5]
-	
-	
 
+Ejemplos de funciones	
+	
+	obtenerprimero([Valor|_],Valor).
+	
+	obtenerultimo([_Pos1|T],V):-
+		obtenerultimo(T,V).
+	obtenerultimo([V|[ ]],V).
+	
+	obtener2pos([_,C|_],C).
+	
+ejemplos de uso
+
+	?- obtenerprimero([1,2,3],Valor).
+		Valor = 1 ? 
+		yes
+	?- obtenerultimo([1,2,3],V).
+		V = 3 ? 
+		yes
+	?- obtener2pos([1,3,4,5],C).
+		C = 3 ? 
+		yes
+		
+Osea podemos ver como la idea es ir elemento por elemento descartando los elementos que no necesitamos.
+Cuando ponemos _ es que ignoramos el valor de esa posicion , se usa para evitar var vacias.
+
+ 
 #Terminologia
 ##Functor/Predicado 
 
