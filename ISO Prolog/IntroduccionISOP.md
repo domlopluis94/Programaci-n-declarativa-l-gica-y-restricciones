@@ -280,6 +280,7 @@ order)
 ### Negacion 
 #### /+ 
 Si no esta instanciado no se asegura que funcione correctamente 
+	
 	 \+ member(c, [a,k,l]).
 		yes
 		{trace}
